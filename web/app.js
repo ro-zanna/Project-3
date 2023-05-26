@@ -1,7 +1,7 @@
 function init() {
     // This initializes the selector with a list of hard-coded regions. These are the regions that have oil displacement data.
     let selector = d3.select("#selDataset")
-    var regionName = ["USA", "China", "Europe", "India", "World"];
+    var regionName = ["USA", "Europe", "China", "India", "World"];
     for (let i = 0; i < regionName.length; i++) {
         selector.append("option").text(regionName[i]).property("value", regionName[i]);
     };
@@ -34,7 +34,9 @@ function buildCharts(region) {
             orientation: 'v',
         }];
         var barLayout = {
-            title: "BEVs sold per year"
+            title: "EVs sold per year",
+            yaxis: {title: "Vehicles"},
+            xaxis: {title: "Year"}
         }
 
         // Use Plotly to render the chart. This will go to "bar" in the HTML.
@@ -49,12 +51,14 @@ function buildCharts(region) {
         var bardata = [{
             type: 'bar',
             x: filteredData.map(data => data.year),
-            y: filteredData.map(data => data.value),
-            text: "megabarrels",
+            y: filteredData.map(data => data.value*10000000),
+            text: "barrels",
             orientation: 'v'
         }];
         var barLayout = {
-            title: "Megabarrels of oil conserved per year"
+            title: "Barrels of oil conserved per year",
+            yaxis: {title: "Oil (barrels)"},
+            xaxis: {title: "Year"}
         }
 
         // Use Plotly to render the chart. This will go to "bar2" in the HTML.
