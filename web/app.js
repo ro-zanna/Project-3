@@ -22,7 +22,7 @@ init();
 
 function buildCharts(region) {
     // Request JSON-formatted sales data from our API, filter for BEV data in the selected region.
-    d3.json("http://127.0.0.1:5000/sales").then((data) => {
+    d3.json("sales.json").then((data) => {
         let filteredData = data.filter(obj => obj.powertrain == "BEV").filter(obj => obj.region == region);
 
         // Make a vertical bar chart. The X axis is years and the Y axis is sales numbers - "value" in the JSON.
@@ -42,7 +42,7 @@ function buildCharts(region) {
     });
     // Request JSON-formatted oil displacement data from our API, filter for the selected region.
     // Only BEV data in this dataset, so no powertrain filter is necessary.
-    d3.json("http://127.0.0.1:5000/oil_displacement").then((data) => {
+    d3.json("oil_displacement.json").then((data) => {
         let filteredData = data.filter(obj => obj.region == region);
 
         // Make a vertical bar chart. The X axis is years and the Y axis is oil displacement numbers - "value" in the JSON.
