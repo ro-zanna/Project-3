@@ -22,4 +22,4 @@ For the global EV data explorer, we downloaded EV sales and oil displacement dat
 As part of the project requirements, we created a Python Flask-powered API using SQLAlchemy that served global EV sales and oil displacement data from Postgres to the dashboard. We also created a script that loaded the global EV CSV data files and USA charging station JSON data into Postgres via Python. However, using this would have required hosting an API outside of Github Pages for the interactive Javascript dashboard to load properly, so we kept the Flask API/Postgres database separate and ran the dashboard from JSON files for demo purposes.
 
 
-Slide deck: bit.ly/3IN4m9W
+Slide deck: https://bit.ly/3IN4m9W
