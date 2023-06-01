@@ -1,6 +1,9 @@
 # Electric Cars
 
 
+# This Project was made by  Lwam Mehare , Telmen Erdenebat, Rosanna Chiu.
+
+
 As we become increasingly conscious of the environmental impact of transportation, electric cars have emerged as a potential solution to reduce carbon emissions and promote sustainability. However, the adoption of electric cars is still limited due to various factors, including high prices, limited range, and lack of charging infrastructure. To promote the wider adoption of electric cars, it is essential to understand the current state of the electric car market on a local as well as global scale, and identify value propositions for potential consumers, as well as ease of use around owning and maintaining an electric vehicle. 
 
 
